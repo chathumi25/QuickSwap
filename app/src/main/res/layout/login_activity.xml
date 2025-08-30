@@ -1,6 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_login"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingTop="25dp"> <!-- Space below status bar -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Top Bar -->
+    <TextView
+        android:id="@+id/tv_login_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="@color/loginBoxColor"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
+    <!-- App Name -->
+
+    <!-- Username / Email -->
+    <EditText
+        android:id="@+id/et_username_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@color/logoBoxColor"
+        android:hint="User Name / Email"
+        android:padding="10dp"
+        android:textColor="@color/textPrimary"
+        android:textColorHint="@color/textPrimary" />
+
+    <TextView
+        android:id="@+id/tv_required_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="*Required"
+        android:textColor="@color/textPrimary"
+        android:textSize="12sp" />
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@color/logoBoxColor"
+        android:hint="Password"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:textColor="@color/textPrimary"
+        android:textColorHint="@color/textPrimary" />
+
+    <TextView
+        android:id="@+id/tv_required_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="*Required"
+        android:textColor="@color/textPrimary"
+        android:textSize="12sp" />
+
+    <!-- Save Data + Forget Password -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/cb_save_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/checkboxColor"
+            android:text="Save Data"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="120dp"
+            android:text="Forget Password ?"
+            android:textColor="@color/forgetPasswordColor"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/loginButtonColor"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- Sign Up Section -->
+    <LinearLayout
+        android:id="@+id/layout_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_no_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don’t have an account ?"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Sign Up"
+            android:textColor="@color/forgetPasswordColor"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

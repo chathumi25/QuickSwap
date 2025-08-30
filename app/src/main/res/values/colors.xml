@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="statusBarColor">#1F28B1</color> <!-- Status bar -->
+    <color name="loginBoxColor">#4850B8</color> <!-- Login bar background -->
+    <color name="white">#FFFFFF</color> <!-- White text -->
+    <color name="logoBoxColor">#718DD2</color> <!-- Input box color -->
+    <color name="textPrimary">#07171D</color> <!-- Required + Save Data text -->
+    <color name="checkboxColor">#718DD2</color> <!-- Checkbox color -->
+    <color name="checkboxTick">#1E1D3A</color> <!-- Checkbox tick -->
+    <color name="forgetPasswordColor">#0B10A6</color> <!-- Forget password & Signup link -->
+    <color name="loginButtonColor">#3063E0</color> <!-- Login button background -->
 </resources>
