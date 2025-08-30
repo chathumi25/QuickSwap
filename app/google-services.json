@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "10369322038",
+    "project_id": "quickswap-80951",
+    "storage_bucket": "quickswap-80951.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10369322038:android:35e29887204f3d745f9c97",
+        "android_client_info": {
+          "package_name": "com.example.quickswap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqg1GYWsXbm_autn-mU0MlMDeFKcW46p8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
