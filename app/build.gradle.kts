@@ -1,8 +1,6 @@
 plugins {
-    id("com.android.application")
-    id("com.google.gms.google-services")      // Firebase core plugin
-    id("com.google.firebase.crashlytics")     // Crashlytics plugin
-    id("com.google.firebase.firebase-perf")   // Performance Monitoring plugin
+    id("com.google.gms.google-services") // Required for Firebase
+    alias(libs.plugins.android.application)
 }
 
 android {
@@ -36,41 +34,34 @@ android {
 }
 
 dependencies {
-    // AndroidX + UI
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.activity:activity:1.7.2")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
 
-    // Firebase libraries
-    implementation("com.google.firebase:firebase-auth:24.0.1")
-    implementation("com.google.firebase:firebase-database:22.0.0")
-    implementation("com.google.firebase:firebase-firestore:26.0.0")
-    implementation("com.google.firebase:firebase-storage:22.0.0")
-    implementation("com.google.firebase:firebase-functions:22.0.0")
-    implementation("com.google.firebase:firebase-crashlytics:20.0.1")
-    implementation("com.google.firebase:firebase-perf:22.0.1")
-    implementation("com.google.firebase:firebase-messaging:25.0.0")
-    implementation("com.google.firebase:firebase-inappmessaging-display:22.0.0")
-    implementation("com.google.firebase:firebase-config:23.0.0")
-    implementation("com.google.firebase:firebase-analytics:23.0.0")
+    // Firebase BOM - manages all versions
+    implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
 
-    // ML Kit - use only the specific features you need
-    // Example: Face detection, Barcode scanning, Text recognition
-    implementation("com.google.mlkit:face-detection:16.1.5")
-    implementation("com.google.mlkit:barcode-scanning:17.0.2")
-    implementation("com.google.mlkit:text-recognition:16.0.0")
+    // Firebase services
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.firebase:firebase-firestore:24.10.3")
+    implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // Google Identity Services
-    implementation("androidx.credentials:credentials:1.5.0")
-    implementation("androidx.credentials:credentials-play-services-auth:1.5.0")
-    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 
-    // Google Mobile Ads
-    implementation("com.google.android.gms:play-services-ads:24.5.0")
+
+
+
+    implementation(libs.firebase.storage)
+
 
     // Testing
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+
 }
