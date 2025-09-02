@@ -1,7 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Dark mode base theme -->
     <style name="Base.Theme.QuickSwap" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
+
+    <style name="Theme.QuickSwap" parent="Base.Theme.QuickSwap" />
+
+    <!-- Night Splash Theme -->
+    <style name="Theme.QuickSwap.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/logo_t</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>
